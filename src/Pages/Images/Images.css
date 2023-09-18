@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap");
+
+body {
+  background-color: black;
+  margin-inline: 50px;
+}
+img {
+  border-radius: 20px;
+  border: 5px solid purple;
+  cursor: pointer;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imagename {
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  color: aliceblue;
+}
+.gallery {
+  font-size: 50px;
+  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  padding-bottom: 30px;
+  text-align: center;
+}
