@@ -17,17 +17,17 @@ const Card = ({ src, title, id, index, moveImage }) => {
         return;
       }
       const hoverBoundingRect = ref.current.getBoundingClientRect();
-      const hoverMiddleY =
-        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+      const hoverMiddleX = (hoverBoundingRect.right - hoverBoundingRect.left) / 2;
+      const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       const clientOffset = monitor.getClientOffset();
+      const hoverClientX = clientOffset.x - hoverBoundingRect.left;
       const hoverClientY = clientOffset.y - hoverBoundingRect.top;
-      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-        return;
-      }
-      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-        return;
-      }
-      moveImage(dragIndex, hoverIndex);
+
+      // Calculate the distance between the drag and hover positions in both directions
+      const dx = hoverClientX - hoverMiddleX;
+      const dy = hoverClientY - hoverMiddleY;
+
+      moveImage(dragIndex, hoverIndex, dx, dy);
       item.index = hoverIndex;
     },
   });
@@ -54,7 +54,7 @@ const Card = ({ src, title, id, index, moveImage }) => {
 const Gallery = () => {
   const [images, setImages] = useState(imageList);
 
-  const moveImage = useCallback((dragIndex, hoverIndex) => {
+  const moveImage = useCallback((dragIndex, hoverIndex, dx, dy) => {
     setImages((prevCards) => {
       const clonedCards = [...prevCards];
       const removedItem = clonedCards.splice(dragIndex, 1)[0];
