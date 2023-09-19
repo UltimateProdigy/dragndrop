@@ -23,7 +23,7 @@ const Card = ({ src, title, id, index, moveImage }) => {
       const hoverClientX = clientOffset.x - hoverBoundingRect.left;
       const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
-      // Calculate the distance between the drag and hover positions in both directions
+      
       const dx = hoverClientX - hoverMiddleX;
       const dy = hoverClientY - hoverMiddleY;
 
