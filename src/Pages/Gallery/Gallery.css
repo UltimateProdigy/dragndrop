@@ -18,22 +18,26 @@ body {
   font-family: 'Kurale', serif;
   text-align: center;
   font-size: 50px;
-  padding-bottom: 50px;
 }
 .tag {
   color: white;
   margin-right: 10px;
   font-family: 'DM Sans', sans-serif;
   padding-inline: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border:  2px solid white;
 }
 .tags {
   margin-top: 9px;
-  border:  2px solid black;
+  border:  2px solid;
 }
 
 .card:hover {
   transform: scale(0.9);
   transition: 0.5s;
   cursor: pointer;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
 }

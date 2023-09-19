@@ -3,8 +3,10 @@ import "./Gallery.css";
 import imageList from "../../data";
 import { useDrag, useDrop } from "react-dnd";
 import { Tag } from "antd";
+import Search from "../../components/Search/Search";
 
-// Function to generate consistent colors based on the tag name
+// Function to generate different colors for different tags
+
 function getColorForTag(tag) {
   const hash = tag.split("").reduce((acc, char) => char.charCodeAt(0) + acc, 0);
   const hue = hash % 360;
@@ -59,7 +61,11 @@ const Card = ({ src, title, id, index, moveImage, tags }) => {
       <img src={src} alt={title} />
       <div className="tags">
         {tags.map((tag, tagIndex) => (
-          <Tag key={tagIndex} style={{ backgroundColor: getColorForTag(tag) }} className="tag">
+          <Tag
+            key={tagIndex}
+            style={{ backgroundColor: getColorForTag(tag) }}
+            className="tag"
+          >
             {tag}
           </Tag>
         ))}
@@ -70,6 +76,7 @@ const Card = ({ src, title, id, index, moveImage, tags }) => {
 
 const Gallery = () => {
   const [images, setImages] = useState(imageList);
+  
 
   const moveImage = useCallback((dragIndex, hoverIndex, dx, dy) => {
     setImages((prevCards) => {
@@ -80,21 +87,37 @@ const Gallery = () => {
     });
   }, []);
 
+  const filterImages = (selectedTags) => {
+    if (selectedTags.length === 0) {
+      // If no tags are selected, display all images
+      setImages(imageList);
+    } else {
+      // Filter images based on selected tags
+      const filteredImages = imageList.filter((image) =>
+        image.tags.some((tag) => selectedTags.includes(tag))
+      );
+      setImages(filteredImages);
+    }
+  };
+
   return (
-    <div className="gallery">
-      {images.map((image, index) => (
-        <Card
-          className="card"
-          key={image.id}
-          src={image.img}
-          title={image.title}
-          id={image.id}
-          index={index}
-          moveImage={moveImage}
-          tags={image.tags}
-        />
-      ))}
-    </div>
+    <>
+      <Search onFilterImages={filterImages} />
+      <div className="gallery">
+        {images.map((image, index) => (
+          <Card
+            className="card"
+            key={image.id}
+            src={image.img}
+            title={image.title}
+            id={image.id}
+            index={index}
+            moveImage={moveImage}
+            tags={image.tags}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
