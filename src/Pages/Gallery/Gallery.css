@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
 
 body {
-  background-color: black;
-  margin-inline: 50px;
+  background: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
+  margin-inline: 4vw;
 }
 .gallery {
   display: grid;
@@ -13,10 +13,12 @@ body {
   padding-bottom: 30px;
   
 }
+@media (max-width: 1390px) {
+  .gallery {grid-template-columns: repeat(2, 1fr); column-gap: 10px;}
+}
 .mygallery {
-  color: aliceblue;
-  font-family: 'Kurale', serif;
-  text-align: center;
+  color: black;
+  font-family: 'DM Sans', sans-serif;
   font-size: 50px;
 }
 .tag {
@@ -25,19 +27,12 @@ body {
   font-family: 'DM Sans', sans-serif;
   padding-inline: 5px;
   border-radius: 5px;
-  border:  2px solid white;
+  border:  2px solid black;
 }
-.tags {
-  margin-top: 9px;
-  border:  2px solid;
-}
+
 
 .card:hover {
   transform: scale(0.9);
   transition: 0.5s;
   cursor: pointer;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
 }

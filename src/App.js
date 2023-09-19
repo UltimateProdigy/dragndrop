@@ -1,7 +1,6 @@
 import React from "react";
 import Gallery from "./Pages/Gallery/Gallery";
 import "./Pages/Gallery/Gallery.css";
-import Search from "./components/Search/Search";
 
 function App() {
   return (

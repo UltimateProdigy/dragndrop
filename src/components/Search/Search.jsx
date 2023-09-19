@@ -31,11 +31,11 @@ const Search = ({ onFilterImages }) => {
     <Select
       mode="tags"
       style={{
-        width: "30%",
+        width: "400px",
         height: "10%",
-        marginTop: "55px",
-        border: "3px solid purple",
-        borderRadius: "10px"
+        marginBottom: "90px",
+        border: "3px solid black",
+        borderRadius: "10px",
       }}
       placeholder="Search"
       onChange={handleChange}
