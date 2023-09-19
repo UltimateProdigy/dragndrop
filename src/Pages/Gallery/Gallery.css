@@ -16,6 +16,9 @@ body {
 @media (max-width: 1390px) {
   .gallery {grid-template-columns: repeat(2, 1fr); column-gap: 10px;}
 }
+@media (max-width: 900px) {
+  .gallery {grid-template-columns: repeat(1, 1fr); column-gap: 10px;}
+}
 .mygallery {
   color: black;
   font-family: 'DM Sans', sans-serif;

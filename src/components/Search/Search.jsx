@@ -34,7 +34,7 @@ const Search = ({ onFilterImages }) => {
         width: "400px",
         height: "10%",
         marginBottom: "90px",
-        border: "3px solid black",
+        border: "3px solid purple",
         borderRadius: "10px",
       }}
       placeholder="Search"
