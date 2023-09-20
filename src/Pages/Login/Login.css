@@ -57,9 +57,10 @@
     font-size: 12px;
   }
   .loginForm {
-    width: 300px;
+    width: 320px;
   }
   .introgallery {
-    font-size: 40px;
+    font-size: 60px;
+    padding-top: 30px;
   }
 }
