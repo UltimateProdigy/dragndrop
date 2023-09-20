@@ -1,1 +1,2 @@
-A Drag and Drop Image Gallery with data fetched from Unsplash Api
+A Drag and Drop Image Gallery of static images with an existing user authentication with firebase
+
