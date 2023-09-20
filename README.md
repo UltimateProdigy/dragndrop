@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 My React Gallery App
 Welcome to my React Gallery App! This project features a login page with Firebase authentication and a gallery page where you can view and search images based on tags.
 
@@ -33,7 +33,7 @@ npm install
 Set Up Firebase:
 
 Create a Firebase project on the Firebase Console.
-Configure Firebase in your project by adding your Firebase configuration details to the Firebase config file (usually located in /src/firebase-config.js).
+Configure Firebase in your project by adding your Firebase configuration details to the Firebase config file
 Start the development server:
 
 sql
@@ -57,8 +57,4 @@ Special thanks to Firebase for providing a secure authentication and database so
 Thanks to the React community for creating a fantastic library.
 Feel free to customize this README to better suit your project,
 
-
-=======
-A Drag and Drop Image Gallery of static images with an existing user authentication with firebase
->>>>>>> d0dc95e736fa8b5fdd339f54da8674a98c09b32c
 
