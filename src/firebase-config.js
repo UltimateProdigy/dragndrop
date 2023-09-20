@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth"
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
+    apiKey: "AIzaSyDLqNdlJdpD8y9wBbF0Xo23WMEQlhJ7zv4",
     authDomain: "dragndrop-c88c6.firebaseapp.com",
     projectId: "dragndrop-c88c6",
     storageBucket: "dragndrop-c88c6.appspot.com",
