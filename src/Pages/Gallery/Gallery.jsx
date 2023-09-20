@@ -4,6 +4,8 @@ import imageList from "../../data";
 import { useDrag, useDrop } from "react-dnd";
 import { Tag } from "antd";
 import Search from "../../components/Search/Search";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Function to generate different colors for different tags
 
@@ -76,7 +78,6 @@ const Card = ({ src, title, id, index, moveImage, tags }) => {
 
 const Gallery = () => {
   const [images, setImages] = useState(imageList);
-  
 
   const moveImage = useCallback((dragIndex, hoverIndex, dx, dy) => {
     setImages((prevCards) => {
@@ -100,9 +101,22 @@ const Gallery = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    console.log(accessToken);
+    if (!accessToken) {
+      navigate("/");
+    }
+  }, [navigate]);
+
   return (
-    <>
-      <Search onFilterImages={filterImages} />
+    <div className="background">
+      <div className="container">
+        <h1 className="imggallery">Gallery</h1>
+        <Search onFilterImages={filterImages} />
+      </div>
       <div className="gallery">
         {images.map((image, index) => (
           <Card
@@ -117,7 +131,7 @@ const Gallery = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

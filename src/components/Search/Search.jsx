@@ -22,8 +22,8 @@ const Search = ({ onFilterImages }) => {
     });
   });
 
+  // Pass the selected tags to the parent component for filtering
   const handleChange = (selectedTags) => {
-    // Pass the selected tags to the parent component for filtering
     onFilterImages(selectedTags);
   };
 

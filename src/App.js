@@ -1,13 +1,19 @@
 import React from "react";
-import Gallery from "./Pages/Gallery/Gallery";
 import "./Pages/Gallery/Gallery.css";
+import Login from "./Pages/Login/Login";
+import Gallery from "./Pages/Gallery/Gallery";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1 className="mygallery">MY GALLERY</h1>
-      <Gallery />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" exact element={<Login />} />
+          <Route path="/gallery" element={<Gallery />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

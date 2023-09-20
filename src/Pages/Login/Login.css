@@ -1,0 +1,57 @@
+.errmsg {
+  font-size: 20px;
+  text-align: center;
+  background-color: red;
+  width: 500px;
+  border-radius: 10px 10px 10px 10px;
+  color: #fff;
+}
+.loginForm {
+  width: 500px;
+  height: 280px;
+  color: #fff;
+  background-color: transparent;
+  border: solid white;
+  padding: 25px;
+  border-radius: 10px;
+}
+.loginForm input {
+  width: 100%;
+  padding: 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 5px;
+  color: black;
+  outline: none;
+}
+.loginForm input:focus {
+  border: black 4px solid;
+}
+
+.loginForm button {
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: 0.5s;
+  color: white;
+  border: 2px solid white;
+}
+.loginForm button:hover {
+  background-color: #fff;
+  color: black;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.introgallery {
+  color: white;
+  font-size: 70px;
+}
+
+@media (max-width: 600px) {
+  .errmsg {width: 400px; font-size: 15px;}
+  .loginForm {width: 350px;}
+}

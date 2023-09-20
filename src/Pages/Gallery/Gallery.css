@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap");
 
-
 body {
-  background: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
   margin-inline: 4vw;
+  background-image: url("../../../public/background.jpg");
+  background-size: cover;
+  font-family: "DM Sans", sans-serif;
 }
 .gallery {
   display: grid;
@@ -11,31 +12,40 @@ body {
   row-gap: 40px;
   column-gap: 40px;
   padding-bottom: 30px;
-  
 }
+
 @media (max-width: 1390px) {
-  .gallery {grid-template-columns: repeat(2, 1fr); column-gap: 10px;}
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
 }
 @media (max-width: 900px) {
-  .gallery {grid-template-columns: repeat(1, 1fr); column-gap: 10px;}
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 10px;
+  }
 }
 .mygallery {
-  color: black;
-  font-family: 'DM Sans', sans-serif;
+  color: white;
   font-size: 50px;
 }
 .tag {
   color: white;
   margin-right: 10px;
-  font-family: 'DM Sans', sans-serif;
   padding-inline: 5px;
   border-radius: 5px;
-  border:  2px solid black;
+  border: 2px solid white;
 }
-
 
 .card:hover {
   transform: scale(0.9);
   transition: 0.5s;
   cursor: pointer;
+}
+
+.imggallery {
+  color: white;
+  margin-top: 50px;
+  font-size: 50px;
 }
