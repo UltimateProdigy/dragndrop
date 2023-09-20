@@ -7,14 +7,13 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 40px;
-  column-gap: 40px;
   padding-bottom: 30px;
 }
 @media (max-width: 2560px) {
   .gallery {
+    display: grid;
+    row-gap: 40px;
+    column-gap: 40px;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
   }
