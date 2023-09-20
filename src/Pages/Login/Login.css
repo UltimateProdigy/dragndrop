@@ -52,6 +52,14 @@
 }
 
 @media (max-width: 600px) {
-  .errmsg {width: 400px; font-size: 15px;}
-  .loginForm {width: 350px;}
+  .errmsg {
+    width: 320px;
+    font-size: 12px;
+  }
+  .loginForm {
+    width: 300px;
+  }
+  .introgallery {
+    font-size: 40px;
+  }
 }
