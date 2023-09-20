@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 My React Gallery App
 Welcome to my React Gallery App! This project features a login page with Firebase authentication and a gallery page where you can view and search images based on tags.
 
@@ -57,4 +58,7 @@ Thanks to the React community for creating a fantastic library.
 Feel free to customize this README to better suit your project,
 
 
+=======
+A Drag and Drop Image Gallery of static images with an existing user authentication with firebase
+>>>>>>> d0dc95e736fa8b5fdd339f54da8674a98c09b32c
 
