@@ -6,9 +6,6 @@ body {
   background-size: cover;
   font-family: "DM Sans", sans-serif;
 }
-.gallery {
-  padding-bottom: 30px;
-}
 @media (max-width: 2560px) {
   .gallery {
     display: grid;
