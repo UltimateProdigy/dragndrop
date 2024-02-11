@@ -64,7 +64,10 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign In</button>
+        <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+          <button type="submit">Sign In</button>
+          <button>Sign Up</button>
+        </div>
       </form>
     </div>
   );
